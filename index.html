@@ -4,22 +4,23 @@
 	<title>Crystal Collector Game</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootswatch.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 <body>
 <!-- Heading container -->
-	<div class="container-fluid">
+	<header class="container-fluid">
 		<div class="jumbotron">
 			<h1 class="text-center">Crystals Collector!</h1>
 		</div>
-	</div>
+	</header>
 <!-- End of heading container -->
 
 <!-- Content container -->
 <div class="container">
 <div class="row">
+<!-- Game rules section -->
 <div class="col-md-12">
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -35,21 +36,61 @@
 			</ul>
 		</div>
 	</div>
-</div>	
+</div>
+<!-- end of game rules section -->
+
 </div>
 	<div class="row">
-		<div class="col-md-6">
-			<div class="well">
+	<!-- Random number -->
+		<div class="col-md-6 col-sm-6 col-xs-6">
+			<div class="well set-height">
 				<h2 class="text-center" id="random-number-output">33</h2>
 			</div>
 		</div>
-		<div class="col-md-6">
-			<div class="well">
+	<!-- end of random number -->
+
+	<!-- wins/losses -->
+		<div class="col-md-6 col-sm-6 col-xs-6">
+			<div class="well set-height">
 				<h3 class="text-center">Wins: <span id="win-output">0</span></h3>
-				<h3 class="text-center">Losses: <span id="win-output">0</span></h3>
+				<h3 class="text-center">Losses: <span id="loss-output">0</span></h3>
+			</div>
+		</div>
+	<!-- End of wins/losses -->
+	</div>
+
+	<!-- crystal images -->
+	<div class="row">
+		<div class="col-md-3 col-sm-3 col-xs-3">
+			<img class="col-sm-12 col-xs-12" src="assets/images/crystal1.jpg" id="crystal-1">
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-3">
+			<img class="col-sm-12 col-xs-12" src="assets/images/crystal2.jpg" id="crystal-2">
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-3">
+			<img class="col-sm-12 col-xs-12" src="assets/images/crystal3.jpg" id="crystal-3">
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-3">
+			<img class="col-sm-12 col-xs-12" src="assets/images/crystal4.jpg" id="crystal-4">
+		</div>
+	</div>
+	<!-- end of crystal images -->
+
+	<!-- user number -->
+	<div class="row">
+		<div class="col-md-12 top-padding">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title text-center">Your total score is:</h3>
+				</div>
+				<div class="panel-body text-center font-reg">
+					<span id="user-score-output">0</span>
+				</div>
 			</div>
 		</div>
 	</div>
+	<!-- end of user number -->
+
 </div>
 <!-- End of content container -->
 	<!-- JQuery -->
