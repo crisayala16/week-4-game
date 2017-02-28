@@ -13,18 +13,19 @@ $(document).ready(function(){
 		return Math.floor(Math.random() * 12) + 1;
 	}
 
-	var crystal = function(){
+	function crystal(){
 		this.value = randomCrystalNumber();
 	}
 
-	crystal1 = new crystal;
-	crystal2 = new crystal;
-	crystal3 = new crystal;
-	crystal4 = new crystal;
+	var crystal1 = new crystal;
+	var crystal2 = new crystal;
+	var crystal3 = new crystal;
+	var crystal4 = new crystal;
 
 	function addValue(crys){
 		userScore += crys.value;
 		userScoreOutput.text(userScore);
+		console.log(crys.value);
 	}
 	function reset(){
 		crystal1 = new crystal;
@@ -49,27 +50,22 @@ $(document).ready(function(){
 		}
 	}
 
-	// $("#crystal-1").on("click", addValue(crystal1));
-
 	$("#crystal-1").on("click", function(){
-		userScore += crystal1.value;
-		userScoreOutput.text(userScore);
+		addValue(crystal1);
 		checkScore();
-	});
+		});
 	$("#crystal-2").on("click", function(){
-		userScore += crystal2.value;
-		userScoreOutput.text(userScore);
+		addValue(crystal2);
 		checkScore();
-	});
+		});
 	$("#crystal-3").on("click", function(){
-		userScore += crystal3.value;
-		userScoreOutput.text(userScore);
+		addValue(crystal3);
 		checkScore();
-	});
+		});
 	$("#crystal-4").on("click", function(){
-		userScore += crystal4.value;
-		userScoreOutput.text(userScore);
+		addValue(crystal4);
 		checkScore();
-	});
+		});
+
 	randomNumberOutput.html(randomNumber);
 })
